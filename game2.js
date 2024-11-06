@@ -295,23 +295,12 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-window.addEventListener("touchend", function() {
+window.addEventListener("touchstart", function() {
     var button = document.getElementById("instruction-play-button");
     if (button && document.activeElement !== button) {
         button.focus();
         button.click();
     }
-
-    document.addEventListener("DOMContentLoaded", function() {
-        const audio = document.getElementById("instruction-play-button");
-        audio.load();
-
-      
-        document.addEventListener("click", playSound, { once: true });
-        document.addEventListener("touchstart", playSound, { once: true });
-    });
-
-
 });
 
 
