@@ -301,4 +301,19 @@ window.addEventListener("touchend", function() {
         button.focus();
         button.click();
     }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const audio = document.getElementById("instruction-play-button");
+        audio.load();
+
+      
+        document.addEventListener("click", playSound, { once: true });
+        document.addEventListener("touchstart", playSound, { once: true });
+    });
+
+
 });
+
+
+
+

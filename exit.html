@@ -20,7 +20,7 @@
         <button id="exitBtn">Exit</button>
     </div>
 
-    <audio id="win-sound" src="sounds/well down.mp3"></audio>
+    <audio id="win-sound" src="sounds/You win.mp3"></audio>
 
     <script>
         window.addEventListener('load', () => {
@@ -37,6 +37,16 @@
         document.getElementById('exitBtn').addEventListener('click', () => {
             window.location.href = 'https://englisheasy.net/dashboard';
         });
+
+
+        
+ window.onload=function(){
+    setTimeout(function(){
+    document.getElementById("win-sound").play()
+
+    },100)}
+
+ 
     </script>
 </body>
 </html>
