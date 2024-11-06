@@ -238,4 +238,11 @@ function createConfetti() {
 
 
 
- window.onload=function(){document.getElementById("instruction-play-button").click()}
+ window.onload=function(){
+    setTimeout(function(){
+    document.getElementById("instruction-play-button").click()
+
+    },100)}
+
+ 
+ 
