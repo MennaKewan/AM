@@ -256,7 +256,7 @@ document.addEventListener("DOMContentLoaded", function() {
         if (button) {
             button.click();
         }
-    }, 3000); // يمكنك تعديل الوقت كما تريد
+    }, 100); // يمكنك تعديل الوقت كما تريد
 });
 
 // إضافة حدث لمس الشاشة لتشغيل الزر عند اللمس
