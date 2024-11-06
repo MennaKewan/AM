@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True or False Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="true-false.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="container text-center">
+        <img src="images/logo.png" alt="Logo" class="logo" id="logo">
+        <div id="game-container" class="mt-4">
+            <div id="score" class="mb-4">Score: <span id="score-value">0</span></div>
+            <button id="listen-button" class="btn btn-warning mb-4">🔊</button>
+            <div id="question-box" class="mb-4">
+                <div id="question-text">question</div>
+            </div>
+            <div id="image-placeholder" class="mb-4">
+                <img id="question-image" src="" alt="Question Image" class="img-fluid">
+            </div>
+            <div id="answers" class="d-flex justify-content-around mb-4">
+                <button class="answer-btn btn btn-success" id="true-btn">
+                    <i class="fas fa-check"></i> True
+                </button>
+                <button class="answer-btn btn btn-danger" id="false-btn">
+                    <i class="fas fa-times"></i> False
+                </button>
+            </div>
+            <div id="confetti" class="hidden"></div>
+        </div>
+    </div>
+
+    <script src="true-false.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: url('images/bg/design.jpg') no-repeat center center fixed; 
+    background-size: cover;
+    align-items: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    overflow: hidden;
+}
+.container {
+    text-align: center;
+    z-index: 1; 
+}
+
+.logo {
+    width: 70%;
+    transition: all 1s ease;
+    position: relative;
+    margin-bottom: 20px; 
+}
+
+button {
+    font-size: 1.5em; 
+    padding: 1em 3em; 
+    background: linear-gradient(135deg, #8267c3, #9e83df);
+    border: none;
+    border-radius: 75px; 
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    display: block; 
+    margin: 0 auto; 
+}
+
+button:hover {
+    background: linear-gradient(135deg, #a795d2, #bca6ee);
+    transform: scale(1.1);
+    box-shadow: 0 0.8em 2em rgba(0, 0, 0, 0.3);
+}
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    text-align: center;
+}
+
+.d-none {
+    display: none;
+}

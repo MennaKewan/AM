@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="menu.css">
+</head>
+<body>
+    <div id="content" class="container text-center">
+        <img src="images/logo.png" alt="Logo" class="logo" id="logo">
+        <button id="startBtn" class="btn btn-primary mt-4">Play</button>
+    </div>
+
+    <script>
+        document.getElementById('startBtn').addEventListener('click', () => {
+            setTimeout(() => {
+                window.location.href = 'instructions.html'; 
+            }, 0); 
+        });
+    </script>
+</body>
+</html>

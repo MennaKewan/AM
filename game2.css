@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden; 
+    background: url('images/bg/bbgg.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 30px;
+    width: 200px;
+    height: auto;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 40px; 
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    background-color: rgba(147, 147, 147, 0.9); 
+    animation: fadeIn 1s ease-in-out;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    animation: slideIn 1s ease;
+}
+
+p {
+    font-size: 1.5em; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1.2em;
+    }
+
+    .logo {
+        width: 80px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Protest Strike", sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('images/bg/bbgg.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#game-container {
+    text-align: center;
+    background-color: transparent;
+    z-index: 1; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80%;
+}
+
+#game-score {
+    font-size: 2.5em;
+    color: #00f92e;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#game-question-box {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#game-question-text {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+}
+
+#game-listen-button {
+    padding: 10px 20px;
+    font-size: 1.3em;
+    background-color: #222222;
+    border: 2px solid #ff9800;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+#game-listen-button:hover {
+    background-color: #000000;
+}
+
+#game-image-placeholder {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#game-question-image {
+    width: 50%;
+    height: auto;
+    max-width: 400px;
+}
+
+#game-answers {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.game-answer-btn {
+    flex: 1;
+    margin: 0 10px;
+    padding: 15px;
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+
+.game-answer-btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.game-answer-btn:disabled {
+    background-color: grey;
+    cursor: not-allowed;
+}
+
+#game-confetti {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    opacity: 0.8;
+    animation: fall 1s forwards;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .logo {
+        width: 20%;
+    }
+
+    #game-question-text {
+        font-size: 1.2em;
+    }
+
+    .game-answer-btn {
+        font-size: 1.2em;
+        padding: 10px;
+    }
+
+    #game-question-image {
+        width: 70%;
+    }
+}
