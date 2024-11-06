@@ -20,9 +20,10 @@
         <button id="exitBtn">Exit</button>
     </div>
 
-    <audio id="win-sound" src="sounds/You win.mp3"></audio>
+    <audio id="win-sound" src="sounds/You win.mp3" playsinline ></audio>
 
     <script>
+
         window.addEventListener('load', () => {
             const winSound = document.getElementById('win-sound');
             winSound.play();
@@ -31,17 +32,52 @@
         });
 
         document.getElementById('homeBtn').addEventListener('click', () => {
-    const winSound = document.getElementById('win-sound');
-    winSound.play().then(() => {
-        console.log('Sound played successfully');
-    }).catch((error) => {
-        console.log('Sound playback failed:', error);
+            window.location.href = 'index.html'; 
+        });
+
+        document.getElementById('exitBtn').addEventListener('click', () => {
+            window.location.href = 'https://englisheasy.net/dashboard';
+        });
+
+
+        
+ window.onload=function(){
+    setTimeout(function(){
+    document.getElementById("win-sound").play()
+
+    },100)}
+
+
+const audioElement = document.getElementById('win-sound');
+
+
+window.document.addEventListener('click', function() {
+    audioContext.resume().then(() => {
+        audioElement.play();
     });
-    window.location.href = 'index.html'; 
+   
 });
 
+audioElement.onended = function() {
+    instructionsContainer.style.display = 'none';
+    gameContainer.style.display = 'flex';
+    showNextDialogue();
+};
 
- 
+listenButton.addEventListener('click', () => {
+    audioContext.resume().then(() => {
+        questionAudio.currentTime = 0;
+        questionAudio.play();
+    });
+});
+
+function stopAudio(audioElement) {
+    audioElement.pause();
+    audioElement.currentTime = 0;
+}
+
+
+
     </script>
 </body>
 </html>

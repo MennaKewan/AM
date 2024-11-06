@@ -282,12 +282,6 @@ document.addEventListener("DOMContentLoaded", function() {
             if (button) {
                
                 button.focus();
-                var event = new MouseEvent("click", {
-                    bubbles: true,
-                    cancelable: true,
-                    view: window
-                });
-                button.dispatchEvent(event);
                 button.click();
             }
         });
@@ -302,7 +296,3 @@ window.addEventListener("touchend", function() {
         button.click();
     }
 });
-
-
-
-
