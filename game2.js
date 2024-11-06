@@ -238,11 +238,33 @@ function createConfetti() {
 
 
 
- window.onload=function(){
-    setTimeout(function(){
-    document.getElementById("instruction-play-button").click()
+//  window.onload=function(){
+//     setTimeout(function(){
+//     document.getElementById("instruction-play-button").click()
 
-    },100)}
+//     },100)}
 
  
  
+
+document.addEventListener("DOMContentLoaded", function() {
+    // تشغيل الزر تلقائياً بعد تحميل الصفحة بـ 3 ثواني (3000 ملي ثانية)
+    setTimeout(function() {
+        var button = document.getElementById("instruction-play-button");
+
+        // التحقق من وجود الزر ثم النقر عليه
+        if (button) {
+            button.click();
+        }
+    }, 3000); // يمكنك تعديل الوقت كما تريد
+});
+
+// إضافة حدث لمس الشاشة لتشغيل الزر عند اللمس
+document.addEventListener("touchstart", function() {
+    var button = document.getElementById("instruction-play-button");
+    
+    // التحقق من وجود الزر ثم النقر عليه
+    if (button) {
+        button.click();
+    }
+});
