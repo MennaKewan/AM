@@ -119,9 +119,9 @@ body {
 #game-listen-button {
     padding: 10px 20px;
     font-size: 1.3em;
-    background-color: #222222;
-    border: 2px solid #ff9800;
-    border-radius: 50px;
+    background-color: #67bf75;
+    border: none;
+    border-radius: 110%;
     cursor: pointer;
     margin-bottom: 20px;
 }
