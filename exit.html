@@ -31,20 +31,15 @@
         });
 
         document.getElementById('homeBtn').addEventListener('click', () => {
-            window.location.href = 'index.html'; 
-        });
+    const winSound = document.getElementById('win-sound');
+    winSound.play().then(() => {
+        console.log('Sound played successfully');
+    }).catch((error) => {
+        console.log('Sound playback failed:', error);
+    });
+    window.location.href = 'index.html'; 
+});
 
-        document.getElementById('exitBtn').addEventListener('click', () => {
-            window.location.href = 'https://englisheasy.net/dashboard';
-        });
-
-
-        
- window.onload=function(){
-    setTimeout(function(){
-    document.getElementById("win-sound").play()
-
-    },100)}
 
  
     </script>

@@ -295,7 +295,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-window.addEventListener("touchstart", function() {
+window.addEventListener("touchend", function() {
     var button = document.getElementById("instruction-play-button");
     if (button && document.activeElement !== button) {
         button.focus();
