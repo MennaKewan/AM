@@ -274,46 +274,31 @@ function createConfetti() {
 
 
 
-// document.addEventListener("DOMContentLoaded", function() {
-          
-//     requestAnimationFrame(function() {
-//         requestAnimationFrame(function() {
-//             var button = document.getElementById("instruction-play-button");
-//             if (button) {
-               
-//                 button.focus();
-//                 button.click();
-//             }
-//         });
-//     });
-// });
-
-
-// window.addEventListener("touchend", function() {
-//     var button = document.getElementById("instruction-play-button");
-//     if (button && document.activeElement !== button) {
-//         button.focus();
-//         button.click();
-//     }
-// });
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
-    var button = document.getElementById("instruction-play-button");
-    if (button) {
-
-        var event = new MouseEvent("click", {
-            bubbles: true,
-            cancelable: true,
-            view: window
+          
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            var button = document.getElementById("instruction-play-button");
+            if (button) {
+               
+                button.focus();
+                var event = new MouseEvent("click", {
+                    bubbles: true,
+                    cancelable: true,
+                    view: window
+                });
+                button.dispatchEvent(event);
+                button.click();
+            }
         });
-        button.dispatchEvent(event);
+    });
+});
+
+
+window.addEventListener("touchend", function() {
+    var button = document.getElementById("instruction-play-button");
+    if (button && document.activeElement !== button) {
+        button.focus();
+        button.click();
     }
 });
