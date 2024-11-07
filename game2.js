@@ -247,52 +247,52 @@ function createConfetti() {
  
  
 
-// document.addEventListener("DOMContentLoaded", function() {
-//     // تشغيل الزر تلقائياً بعد تحميل الصفحة بـ 3 ثواني (3000 ملي ثانية)
-//     setTimeout(function() {
-//         var button = document.getElementById("instruction-play-button");
-
-//         // التحقق من وجود الزر ثم النقر عليه
-//         if (button) {
-//             button.click();
-//         }
-//     }, 100); // يمكنك تعديل الوقت كما تريد
-// });
-
-// // إضافة حدث لمس الشاشة لتشغيل الزر عند اللمس
-// document.addEventListener("touchstart", function() {
-//     var button = document.getElementById("instruction-play-button");
-    
-//     // التحقق من وجود الزر ثم النقر عليه
-//     if (button) {
-//         button.click();
-//     }
-// });
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
-          
-    requestAnimationFrame(function() {
-        requestAnimationFrame(function() {
-            var button = document.getElementById("instruction-play-button");
-            if (button) {
-               
-                button.focus();
-                button.click();
-            }
-        });
-    });
+    // تشغيل الزر تلقائياً بعد تحميل الصفحة بـ 3 ثواني (3000 ملي ثانية)
+    setTimeout(function() {
+        var button = document.getElementById("instruction-play-button");
+
+        // التحقق من وجود الزر ثم النقر عليه
+        if (button) {
+            button.click();
+        }
+    }, 100); // يمكنك تعديل الوقت كما تريد
 });
 
-
-window.addEventListener("touchend", function() {
+// إضافة حدث لمس الشاشة لتشغيل الزر عند اللمس
+document.addEventListener("touchstart", function() {
     var button = document.getElementById("instruction-play-button");
-    if (button && document.activeElement !== button) {
-        button.focus();
+    
+    // التحقق من وجود الزر ثم النقر عليه
+    if (button) {
         button.click();
     }
 });
+
+
+
+
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+          
+//     requestAnimationFrame(function() {
+//         requestAnimationFrame(function() {
+//             var button = document.getElementById("instruction-play-button");
+//             if (button) {
+               
+//                 button.focus();
+//                 button.click();
+//             }
+//         });
+//     });
+// });
+
+
+// window.addEventListener("touchend", function() {
+//     var button = document.getElementById("instruction-play-button");
+//     if (button && document.activeElement !== button) {
+//         button.focus();
+//         button.click();
+//     }
+// });
