@@ -67,12 +67,25 @@ const totalQuestions = dialogues.length;
 
 let audioContext = new (window.AudioContext || window.webkitAudioContext)();
 
-playButton.addEventListener('click', function() {
+instructionsContainer.addEventListener('click', function() {
     audioContext.resume().then(() => {
         audioElement.play();
     });
-    playButton.style.display = 'none';
+    // instructionsContainer.style.display = 'none';
 });
+window.onload = function() {
+    // Wait for the audio context to be resumed and play the audio
+    audioContext.resume().then(() => {
+        audioElement.play();
+    });
+
+    // Hide the instructions container and show the game container after the audio starts playing
+    audioElement.onended = function() {
+        instructionsContainer.style.display = 'none';
+        gameContainer.style.display = 'flex';
+        showNextDialogue(); // Proceed to the next dialogue
+    };
+};
 
 audioElement.onended = function() {
     instructionsContainer.style.display = 'none';
@@ -131,7 +144,7 @@ function checkAnswer(selectedAnswer) {
         if (selectedAnswer === currentDialogue.answer) {
             score += 1;
             scoreDisplay.textContent = Math.floor(score);
-
+            localStorage.setItem('score', score);
             const soundKeys = Object.keys(sound).filter(key => key !== 'confetti' && key !== 'true' && key !== 'false_word' && key !== 'wrong');
             const randomSoundKey = soundKeys[Math.floor(Math.random() * soundKeys.length)];
             const randomSound = new Audio(sound[randomSoundKey]);
@@ -187,6 +200,7 @@ function enableButtons() {
 
 function transitionToNextPage() {
     localStorage.setItem('score', score); 
+    console.log('Score at transition:', score);
     gameContainer.classList.add('stage-transition');
     setTimeout(() => {
         window.location.href = 'exit.html'; 
@@ -223,27 +237,3 @@ function createConfetti() {
     const confettiSound = new Audio(sound.confetti);
     confettiSound.play();
 }
-
-
-document.addEventListener("DOMContentLoaded", function() {
-          
-    requestAnimationFrame(function() {
-        requestAnimationFrame(function() {
-            var button = document.getElementById("instruction-play-button");
-            if (button) {
-               
-                button.focus();
-                button.click();
-            }
-        });
-    });
-});
-
-
-window.addEventListener("touchend", function() {
-    var button = document.getElementById("instruction-play-button");
-    if (button && document.activeElement !== button) {
-        button.focus();
-        button.click();
-    }
-});
