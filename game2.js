@@ -225,74 +225,25 @@ function createConfetti() {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-//  window.onload=function(){
-//     setTimeout(function(){
-//     document.getElementById("instruction-play-button").click()
-
-//     },100)}
-
- 
- 
-
 document.addEventListener("DOMContentLoaded", function() {
-    // تشغيل الزر تلقائياً بعد تحميل الصفحة بـ 3 ثواني (3000 ملي ثانية)
-    setTimeout(function() {
-        var button = document.getElementById("instruction-play-button");
-
-        // التحقق من وجود الزر ثم النقر عليه
-        if (button) {
-            button.click();
-        }
-    }, 100); // يمكنك تعديل الوقت كما تريد
+          
+    requestAnimationFrame(function() {
+        requestAnimationFrame(function() {
+            var button = document.getElementById("instruction-play-button");
+            if (button) {
+               
+                button.focus();
+                button.click();
+            }
+        });
+    });
 });
 
-// إضافة حدث لمس الشاشة لتشغيل الزر عند اللمس
-document.addEventListener("touchstart", function() {
+
+window.addEventListener("touchend", function() {
     var button = document.getElementById("instruction-play-button");
-    
-    // التحقق من وجود الزر ثم النقر عليه
-    if (button) {
+    if (button && document.activeElement !== button) {
+        button.focus();
         button.click();
     }
 });
-
-
-
-
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-          
-//     requestAnimationFrame(function() {
-//         requestAnimationFrame(function() {
-//             var button = document.getElementById("instruction-play-button");
-//             if (button) {
-               
-//                 button.focus();
-//                 button.click();
-//             }
-//         });
-//     });
-// });
-
-
-// window.addEventListener("touchend", function() {
-//     var button = document.getElementById("instruction-play-button");
-//     if (button && document.activeElement !== button) {
-//         button.focus();
-//         button.click();
-//     }
-// });
