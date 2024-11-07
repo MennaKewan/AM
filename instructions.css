@@ -31,7 +31,7 @@ body {
     width: 200px;
 }
 
-.instructions-logo {
+.logo instructions-logo {
     position: fixed;
     top: 20px;
     left: 20px;
@@ -39,10 +39,11 @@ body {
 }
 
 .game-logo {
-    position: fixed;
+   position: fixed;
     top: 20px;
-    left: 30px;
+    left: 20px;
     width: 200px;
+
 }
 
 .start-container {
@@ -122,6 +123,7 @@ p {
     color: #00f92e;
     margin-bottom: 20px;
     text-align: center;
+    font-weight: bolder;
 }
 
 #game-question-box {
@@ -129,7 +131,7 @@ p {
     padding: 15px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 100%;
+    width: 80%;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -140,24 +142,32 @@ p {
     color: #fff;
 }
 
-#listen-button {
+#game-listen-button {
+    background-color: #4caf50 !important; 
+    color: #fff;
+    border-radius: 50%; 
     width: 60px;
     height: 60px;
-    background-color: #4CAF50;
-    border-radius: 50%; 
+    font-size: 1.5em;
     display: flex;
+    scale: 1.3;
     align-items: center;
     justify-content: center;
-    border: none; 
+    border: none;
     cursor: pointer;
-    font-size: 1.5em;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
     transition: background-color 0.3s;
+    
+    position: absolute; 
+    top: 100px;
+    right: 100px;
+}
+
+#game-listen-button i {
+    font-size: 1.3em; 
 }
 
 #game-listen-button:hover {
-    background-color: #000000;
+    background-color: #388e3c !important; 
 }
 
 #game-image-placeholder {
@@ -178,7 +188,7 @@ p {
 }
 
 .game-answer-btn {
-    flex: 1;
+    flex: 0.4;
     margin: 0 10px;
     padding: 15px;
     font-size: 2em;
@@ -187,16 +197,19 @@ p {
     border-radius: 50px;
     transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
     text-align: center;
+    background-color: #38bd74;
+
 }
 
 .game-answer-btn:hover {
     transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(97, 216, 153, 0.2);
+    background-color: #8cd798;
 }
 
 .game-answer-btn:disabled {
-    background-color: grey;
-    cursor: not-allowed;
+    background-color: rgb(152, 216, 149);
+    
 }
 
 #game-confetti {
